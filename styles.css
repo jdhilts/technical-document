@@ -1,5 +1,4 @@
 html, body {
-
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
@@ -7,23 +6,8 @@ html, body {
 ::before,
 ::after {
  box-sizing: border-box;
-   min-width: 320px;
-  height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: block;
-}
-
-@media screen and (max-width: 600px){
-    #main-doc{
-      min-width: 300px;
-    }
-    #navbar {
-      min-width: 50px;
-    }
+ margin: 0;
+ padding: 0;
 }
 
 #navbar {
@@ -36,10 +20,37 @@ body {
   line-height: 40px;  
 }
 
-#main-doc {
-  padding-left: 20px;
-  padding-right: 20px;
+@media (max-width: 600px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 341px;
+    border-right: none;
   }
+
+  .nav-link {
+    height: auto;
+  }
+
+  main {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap; 
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   padding-top: 321px;
+   padding-left: 30px;
+   padding-right: 30px; 
+ }
+
+ h1, header {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+}
 
 #navbar header {
   text-align: center;
@@ -47,7 +58,7 @@ body {
   margin: 0;
 }
 
- .nav-link {
+.nav-link {
   color: black;
   border-right: none;
   border-top: solid;
@@ -60,21 +71,28 @@ body {
   border-bottom: solid;
 }
 
-#main-doc {
+main {
   display: absolute;
-  margin-left: 250px;
-  margin-right: 50px;
-  padding-bottom: 20px;
+  height: auto;
+  padding-bottom: 1rem;
 }
 
 h1 {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 header {
   font-size: 25px;
-  margin-left: 20px;
-  padding-top: 20px; 
+  margin-left: 20px; 
+}
+
+p {
+  line-height: 1.5em;
+  padding-bottom: 5px;
+}
+
+li {
+  line-height: 1.5em;
 }
 
 .code {
@@ -93,17 +111,21 @@ header {
   background-color: rgb(84, 137, 84);
   float: left;
   width: 30px;
-  height: 25px;
+  height: auto;
   text-align: center;
-  padding-top: 6px;
+  padding: 6px;
   margin-right: 10px;
-  border-radius: 20px;
+  border-radius: 30px;
   color: white;
 }
 
 table {
   border: solid 0;
   background-color: #000;
+}
+
+td {
+  line-height: 1.5em;
 }
 
 th, td {
@@ -119,8 +141,9 @@ th {
 
 img {
   width: 100%;
-  min-width: 350px;
+  min-width: 260px;
   max-width: 700px;
+  object-fit: cover;
 }
 
 #first-bullet {
