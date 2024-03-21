@@ -40,7 +40,6 @@ html, body {
 }
 
 main {
-  display: absolute;
   height: auto;
   padding-bottom: 1rem;
 }
@@ -154,6 +153,16 @@ img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+#note {
+  line-height: 1.5em;
+  padding: 5px;
+}
+
+#note-exm {
+  width: 35px;
+  border-radius: 30px;
+}
 }
 
 @media (min-width: 600px) {
@@ -196,5 +205,11 @@ img {
   #note-exm {
     width: 35px;
     border-radius: 30px;
+  }
+}
+
+@media (min-width: 1168px) {
+  main {
+    margin-right: 264.25px;
   }
 }
